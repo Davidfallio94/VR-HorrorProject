@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: 0b34284ee820b2b4f9970b250a5f91f5
+timeCreated: 1518405889
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Cube
+    100004: dead_female02_suit_reference
+    100006: dead_female02_suit_reference_skeleton
+    100008: Lamp
+    100010: //RootNode
+    100012: ValveBiped.Bip01_Head1
+    100014: ValveBiped.Bip01_L_Calf
+    100016: ValveBiped.Bip01_L_Clavicle
+    100018: ValveBiped.Bip01_L_Finger0
+    100020: ValveBiped.Bip01_L_Finger0_end
+    100022: ValveBiped.Bip01_L_Finger1
+    100024: ValveBiped.Bip01_L_Finger1_end
+    100026: ValveBiped.Bip01_L_Finger2
+    100028: ValveBiped.Bip01_L_Finger2_end
+    100030: ValveBiped.Bip01_L_Foot
+    100032: ValveBiped.Bip01_L_Forearm
+    100034: ValveBiped.Bip01_L_Hand
+    100036: ValveBiped.Bip01_L_Thigh
+    100038: ValveBiped.Bip01_L_Toe0
+    100040: ValveBiped.Bip01_L_Toe0_end
+    100042: ValveBiped.Bip01_L_UpperArm
+    100044: ValveBiped.Bip01_Neck1
+    100046: ValveBiped.Bip01_Pelvis
+    100048: ValveBiped.Bip01_R_Calf
+    100050: ValveBiped.Bip01_R_Clavicle
+    100052: ValveBiped.Bip01_R_Finger0
+    100054: ValveBiped.Bip01_R_Finger0_end
+    100056: ValveBiped.Bip01_R_Finger1
+    100058: ValveBiped.Bip01_R_Finger1_end
+    100060: ValveBiped.Bip01_R_Finger2
+    100062: ValveBiped.Bip01_R_Finger2_end
+    100064: ValveBiped.Bip01_R_Foot
+    100066: ValveBiped.Bip01_R_Forearm
+    100068: ValveBiped.Bip01_R_Hand
+    100070: ValveBiped.Bip01_R_Thigh
+    100072: ValveBiped.Bip01_R_Toe0
+    100074: ValveBiped.Bip01_R_Toe0_end
+    100076: ValveBiped.Bip01_R_UpperArm
+    100078: ValveBiped.Bip01_Spine
+    100080: ValveBiped.Bip01_Spine1
+    100082: ValveBiped.Bip01_Spine2
+    100084: ValveBiped.Bip01_Spine4
+    100086: ValveBiped.forward
+    100088: ValveBiped.forward_end
+    400000: Camera
+    400002: Cube
+    400004: dead_female02_suit_reference
+    400006: dead_female02_suit_reference_skeleton
+    400008: Lamp
+    400010: //RootNode
+    400012: ValveBiped.Bip01_Head1
+    400014: ValveBiped.Bip01_L_Calf
+    400016: ValveBiped.Bip01_L_Clavicle
+    400018: ValveBiped.Bip01_L_Finger0
+    400020: ValveBiped.Bip01_L_Finger0_end
+    400022: ValveBiped.Bip01_L_Finger1
+    400024: ValveBiped.Bip01_L_Finger1_end
+    400026: ValveBiped.Bip01_L_Finger2
+    400028: ValveBiped.Bip01_L_Finger2_end
+    400030: ValveBiped.Bip01_L_Foot
+    400032: ValveBiped.Bip01_L_Forearm
+    400034: ValveBiped.Bip01_L_Hand
+    400036: ValveBiped.Bip01_L_Thigh
+    400038: ValveBiped.Bip01_L_Toe0
+    400040: ValveBiped.Bip01_L_Toe0_end
+    400042: ValveBiped.Bip01_L_UpperArm
+    400044: ValveBiped.Bip01_Neck1
+    400046: ValveBiped.Bip01_Pelvis
+    400048: ValveBiped.Bip01_R_Calf
+    400050: ValveBiped.Bip01_R_Clavicle
+    400052: ValveBiped.Bip01_R_Finger0
+    400054: ValveBiped.Bip01_R_Finger0_end
+    400056: ValveBiped.Bip01_R_Finger1
+    400058: ValveBiped.Bip01_R_Finger1_end
+    400060: ValveBiped.Bip01_R_Finger2
+    400062: ValveBiped.Bip01_R_Finger2_end
+    400064: ValveBiped.Bip01_R_Foot
+    400066: ValveBiped.Bip01_R_Forearm
+    400068: ValveBiped.Bip01_R_Hand
+    400070: ValveBiped.Bip01_R_Thigh
+    400072: ValveBiped.Bip01_R_Toe0
+    400074: ValveBiped.Bip01_R_Toe0_end
+    400076: ValveBiped.Bip01_R_UpperArm
+    400078: ValveBiped.Bip01_Spine
+    400080: ValveBiped.Bip01_Spine1
+    400082: ValveBiped.Bip01_Spine2
+    400084: ValveBiped.Bip01_Spine4
+    400086: ValveBiped.forward
+    400088: ValveBiped.forward_end
+    2000000: Camera
+    2300000: Cube
+    3300000: Cube
+    4300000: dead_female02_suit_reference
+    4300002: Cube
+    9500000: //RootNode
+    10800000: Lamp
+    13700000: dead_female02_suit_reference
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DeadBodies_Super
+    second: {fileID: 2100000, guid: 760327e7f4ddad749848d0a5db5bb377, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 4b0d5a14f739b7049aed0232a5c76531, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.05
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
