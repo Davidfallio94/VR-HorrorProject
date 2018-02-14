@@ -11,7 +11,8 @@ namespace control
         Animator m_Animator;
         // Use this for deciding if the GameObject can jump or not
         public static bool keypress;
-        
+        public static bool keypressL;
+
 
         void Start()
         {
@@ -19,6 +20,7 @@ namespace control
             m_Animator = gameObject.GetComponent<Animator>();
             // The GameObject cannot jump
             keypress = false;
+            keypressL = false;
         }
 
         void Update()
@@ -35,6 +37,19 @@ namespace control
             if (keypress == true)
             {
                 m_Animator.SetBool("keypress", true);
+                Debug.Log(keypress);
+            }
+
+            if (keypressL == false)
+            {
+                m_Animator.SetBool("keypressL", false);
+            }
+
+
+            //The GameObject is jumping, so send the Boolean as enabled to the Animator. The jump animation plays.
+            if (keypressL == true)
+            {
+                m_Animator.SetBool("keypressL", true);
                 Debug.Log(keypress);
             }
         }

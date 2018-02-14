@@ -52,7 +52,7 @@ namespace control
 
         void Update()
         {
-            if (Controller.GetHairTriggerDown())
+            if (SteamVR_Controller.Input(SteamVR_Controller.GetDeviceIndex(SteamVR_Controller.DeviceRelation.Rightmost)).GetHairTriggerDown())
             {
 
                 Keypress.keypress = true;
@@ -63,9 +63,31 @@ namespace control
                 }
             }
 
-            if (Controller.GetHairTriggerUp())
+            if (SteamVR_Controller.Input(SteamVR_Controller.GetDeviceIndex(SteamVR_Controller.DeviceRelation.Leftmost)).GetHairTriggerDown())
+            {
+
+                Keypress.keypressL = true;
+                Debug.Log("pressed");
+                if (collidingObject)
+                {
+                    GrabObject();
+                }
+            }
+
+
+            if (SteamVR_Controller.Input(SteamVR_Controller.GetDeviceIndex(SteamVR_Controller.DeviceRelation.Rightmost)).GetHairTriggerUp())
             {
                 Keypress.keypress = false;
+
+                if (objectInHand)
+                {
+                    ReleaseObject();
+                }
+            }
+
+            if (SteamVR_Controller.Input(SteamVR_Controller.GetDeviceIndex(SteamVR_Controller.DeviceRelation.Leftmost)).GetHairTriggerUp())
+            {
+                Keypress.keypressL = false;
 
                 if (objectInHand)
                 {
