@@ -25,7 +25,7 @@ namespace control
 
         void Update()
         {
-
+            if ( keypress == false)
             
             {
                 m_Animator.SetBool("keypress", false);
@@ -42,6 +42,7 @@ namespace control
                 m_Animator.SetBool("keypressL", false);
             }
 
+            if (keypressL == true)
             {
                 m_Animator.SetBool("keypressL", true);
                 Debug.Log(keypress);

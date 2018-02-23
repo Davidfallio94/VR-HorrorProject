@@ -23,12 +23,12 @@ namespace control
             trackedObj = GetComponent<SteamVR_TrackedObject>();
         }
 
-        void Start()
-        {
-            rend = GetComponent<Renderer>();
-            rend.material.shader = Shader.Find("SkinBurning");
-            grabbed = false;
-        }
+        //void Start()
+        //{
+        //    rend = GetComponent<Renderer>();
+        //    rend.material.shader = Shader.Find("SkinBurning");
+        //    grabbed = false;
+        //}
 
 
         public void OnTriggerEnter(Collider other)
@@ -71,11 +71,11 @@ namespace control
                 if (collidingObject)
                 {
                     GrabObject();
-                    if (collidingObject.tag == "burn")
-                    {
-                        StartCoroutine(LongVibration(1, 3999));
-                        grabbed = true;
-                    }
+                    //if (collidingObject.tag == "burn")
+                    //{
+                    StartCoroutine(LongVibration(0.5f, 10000));
+                    //   // grabbed = true;
+                    //}
                 }
             }
 
@@ -87,11 +87,11 @@ namespace control
                 if (collidingObject)
                 {
                     GrabObject();
-                    if (collidingObject.tag == "burn")
-                    {
-                        StartCoroutine(LongVibration(1, 3999));
-                        grabbed = true;
-                    }
+                    //if (collidingObject.tag == "burn")
+                    //{
+                    StartCoroutine(LongVibration(0.5f, 10000));
+                    //   // grabbed = true;
+                    //}
                 }
             }
 
@@ -116,13 +116,13 @@ namespace control
                 }
             }
 
-            if (grabbed == true)
-            {
-                float fallaway = 0;
-                fallaway = fallaway + 0.01f;
-                rend.material.SetFloat("_Threshold", fallaway);
-            }
-            else grabbed = false;
+            //if (grabbed == true)
+            //{
+            //    float fallaway = 0;
+            //    fallaway = fallaway + 0.01f;
+            //    rend.material.SetFloat("_Threshold", fallaway);
+            //}
+            ////else grabbed = false;
 
         }
 

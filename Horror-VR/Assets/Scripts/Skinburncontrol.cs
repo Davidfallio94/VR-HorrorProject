@@ -22,8 +22,8 @@ namespace control
 
             if (grabbed = true)
             {
-                float fallaway = fallaway + 0.01;
-                rend.material.SetFloat("_Threshold", fallaway);
+                //float fallaway = fallaway + 0.01;
+              //  rend.material.SetFloat("_Threshold", fallaway);
             }
             else grabbed = false;
         }
