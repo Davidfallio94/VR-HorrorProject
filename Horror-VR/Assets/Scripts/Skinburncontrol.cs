@@ -4,28 +4,73 @@ using UnityEngine;
 namespace control
 {
 
-    public class Skinburncontorl : MonoBehaviour
+    public class Skinburncontrol : MonoBehaviour
     {
         public static bool grabbed;
-        public Renderer rend;
+        public Material rend;
+        private bool burn;
+        float fallaway = 0;
 
 
         void Start()
         {
-            rend = GetComponent<Renderer>();
-            rend.material.shader = Shader.Find("SkinBurning");
+            //rend = GetComponent<Material>();
+            rend.shader = Shader.Find("Custom/SkinBurning");
+            Debug.Log(rend.shader);
             grabbed = false;
-
+            rend.SetFloat("_Threshold", 0);
+            burn = false;
         }
         void Update()
         {
-
-            if (grabbed = true)
+            if (burn == true)
             {
-                //float fallaway = fallaway + 0.01;
-              //  rend.material.SetFloat("_Threshold", fallaway);
+               
+                    fallaway = fallaway + 0.0007f;
+                    rend.SetFloat("_Threshold", fallaway);
+                    Debug.Log("blazing");
+               
+               
             }
-            else grabbed = false;
+
+           
+            
+                if (burn == false && fallaway > 0.0f)
+                {
+                    fallaway = fallaway - 0.001f;
+                    rend.SetFloat("_Threshold", fallaway);
+                Debug.Log("begone");
+                }
+                
+            }
+
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (grabbed == true)
+            {
+                if (other.tag == "burn")
+                {
+                    burn = true;
+                    Debug.Log("burn baby burn");
+                }
+
+            }
+            
         }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (grabbed == true)
+            {
+                if (other.tag == "burn")
+                {
+                    grabbed = false;
+                    burn = false;
+                    Debug.Log("extinguished");
+                }
+            }
+        }
+
     }
 }

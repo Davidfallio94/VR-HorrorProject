@@ -34,7 +34,7 @@ namespace control
             if (keypress == true)
             {
                 m_Animator.SetBool("keypress", true);
-                Debug.Log(keypress);
+               
             }
 
             if (keypressL == false)
@@ -45,7 +45,7 @@ namespace control
             if (keypressL == true)
             {
                 m_Animator.SetBool("keypressL", true);
-                Debug.Log(keypress);
+
             }
         }
     }

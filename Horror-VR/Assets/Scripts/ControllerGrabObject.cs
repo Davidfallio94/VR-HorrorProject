@@ -8,9 +8,6 @@ namespace control
     {
         private SteamVR_TrackedObject trackedObj;
 
-        public Renderer rend;
-        public bool grabbed;
-
         private GameObject collidingObject;
         private GameObject objectInHand;
         private SteamVR_Controller.Device Controller
@@ -23,12 +20,7 @@ namespace control
             trackedObj = GetComponent<SteamVR_TrackedObject>();
         }
 
-        //void Start()
-        //{
-        //    rend = GetComponent<Renderer>();
-        //    rend.material.shader = Shader.Find("SkinBurning");
-        //    grabbed = false;
-        //}
+     
 
 
         public void OnTriggerEnter(Collider other)
@@ -67,15 +59,12 @@ namespace control
             {
 
                 Keypress.keypress = true;
-                 Debug.Log("pressed");
+                Skinburncontrol.grabbed = true;
                 if (collidingObject)
                 {
                     GrabObject();
-                    //if (collidingObject.tag == "burn")
-                    //{
-                    StartCoroutine(LongVibration(0.5f, 10000));
-                    //   // grabbed = true;
-                    //}
+                    StartCoroutine(LongVibrationR(0.5f, 10000));
+                    
                 }
             }
 
@@ -83,15 +72,12 @@ namespace control
             {
 
                 Keypress.keypressL = true;
-                Debug.Log("pressed");
+                Skinburncontrol.grabbed = true;
                 if (collidingObject)
                 {
                     GrabObject();
-                    //if (collidingObject.tag == "burn")
-                    //{
-                    StartCoroutine(LongVibration(0.5f, 10000));
-                    //   // grabbed = true;
-                    //}
+                    StartCoroutine(LongVibrationL(0.5f, 10000));
+                    
                 }
             }
 
@@ -103,6 +89,7 @@ namespace control
                 if (objectInHand)
                 {
                     ReleaseObject();
+                   
                 }
             }
 
@@ -113,25 +100,27 @@ namespace control
                 if (objectInHand)
                 {
                     ReleaseObject();
+                    
                 }
             }
-
-            //if (grabbed == true)
-            //{
-            //    float fallaway = 0;
-            //    fallaway = fallaway + 0.01f;
-            //    rend.material.SetFloat("_Threshold", fallaway);
-            //}
-            ////else grabbed = false;
 
         }
 
 
-        IEnumerator LongVibration(float length, ushort strength)
+        IEnumerator LongVibrationL(float length, ushort strength)
         {
             for (float i = 0; i < length; i += Time.deltaTime)
             {
-                Controller.TriggerHapticPulse(strength);
+                SteamVR_Controller.Input(SteamVR_Controller.GetDeviceIndex(SteamVR_Controller.DeviceRelation.Leftmost)).TriggerHapticPulse(strength);
+                yield return null; //every single frame for the duration of "length" you will vibrate at "strength" amount
+            }
+        }
+
+        IEnumerator LongVibrationR(float length, ushort strength)
+        {
+            for (float i = 0; i < length; i += Time.deltaTime)
+            {
+                SteamVR_Controller.Input(SteamVR_Controller.GetDeviceIndex(SteamVR_Controller.DeviceRelation.Rightmost)).TriggerHapticPulse(strength);
                 yield return null; //every single frame for the duration of "length" you will vibrate at "strength" amount
             }
         }
@@ -142,6 +131,8 @@ namespace control
             collidingObject = null;
             var joint = AddFixedJoint();
             joint.connectedBody = objectInHand.GetComponent<Rigidbody>();
+            
+
         }
 
         private FixedJoint AddFixedJoint()
@@ -160,7 +151,9 @@ namespace control
                 Destroy(GetComponent<FixedJoint>());
                 objectInHand.GetComponent<Rigidbody>().velocity = Controller.velocity;
                 objectInHand.GetComponent<Rigidbody>().angularVelocity = Controller.angularVelocity;
+
             }
+            
 
             objectInHand = null;
         }
