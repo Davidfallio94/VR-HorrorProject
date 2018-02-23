@@ -1,11 +1,15 @@
 ﻿
 
+using System.Collections;
 using UnityEngine;
 namespace control
 {
     public class ControllerGrabObject : MonoBehaviour
     {
         private SteamVR_TrackedObject trackedObj;
+
+        public Renderer rend;
+        public bool grabbed;
 
         private GameObject collidingObject;
         private GameObject objectInHand;
@@ -17,6 +21,13 @@ namespace control
         void Awake()
         {
             trackedObj = GetComponent<SteamVR_TrackedObject>();
+        }
+
+        void Start()
+        {
+            rend = GetComponent<Renderer>();
+            rend.material.shader = Shader.Find("SkinBurning");
+            grabbed = false;
         }
 
 
@@ -60,6 +71,11 @@ namespace control
                 if (collidingObject)
                 {
                     GrabObject();
+                    if (collidingObject.tag == "burn")
+                    {
+                        StartCoroutine(LongVibration(1, 3999));
+                        grabbed = true;
+                    }
                 }
             }
 
@@ -71,6 +87,11 @@ namespace control
                 if (collidingObject)
                 {
                     GrabObject();
+                    if (collidingObject.tag == "burn")
+                    {
+                        StartCoroutine(LongVibration(1, 3999));
+                        grabbed = true;
+                    }
                 }
             }
 
@@ -93,6 +114,25 @@ namespace control
                 {
                     ReleaseObject();
                 }
+            }
+
+            if (grabbed == true)
+            {
+                float fallaway = 0;
+                fallaway = fallaway + 0.01f;
+                rend.material.SetFloat("_Threshold", fallaway);
+            }
+            else grabbed = false;
+
+        }
+
+
+        IEnumerator LongVibration(float length, ushort strength)
+        {
+            for (float i = 0; i < length; i += Time.deltaTime)
+            {
+                Controller.TriggerHapticPulse(strength);
+                yield return null; //every single frame for the duration of "length" you will vibrate at "strength" amount
             }
         }
 

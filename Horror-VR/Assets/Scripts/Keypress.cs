@@ -26,14 +26,11 @@ namespace control
         void Update()
         {
 
-            //If the GameObject is not jumping, send that the Boolean “Jump” is false to the Animator. The jump animation does not play.
-            if (keypress == false)
+            
             {
                 m_Animator.SetBool("keypress", false);
             }
-
-
-            //The GameObject is jumping, so send the Boolean as enabled to the Animator. The jump animation plays.
+           
             if (keypress == true)
             {
                 m_Animator.SetBool("keypress", true);
@@ -45,9 +42,6 @@ namespace control
                 m_Animator.SetBool("keypressL", false);
             }
 
-
-            //The GameObject is jumping, so send the Boolean as enabled to the Animator. The jump animation plays.
-            if (keypressL == true)
             {
                 m_Animator.SetBool("keypressL", true);
                 Debug.Log(keypress);
