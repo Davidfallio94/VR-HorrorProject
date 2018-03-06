@@ -41,6 +41,12 @@ namespace control
                     rend.SetFloat("_Threshold", fallaway);
                 Debug.Log("begone");
                 }
+
+                if (fallaway < 0)
+            {
+                fallaway = 0;
+                rend.SetFloat("_Threshold", fallaway);
+            }
                 
             }
 
@@ -61,15 +67,15 @@ namespace control
 
         private void OnTriggerExit(Collider other)
         {
-            if (grabbed == true)
-            {
+            //if (grabbed == true)
+            //{
                 if (other.tag == "burn")
                 {
                     grabbed = false;
                     burn = false;
                     Debug.Log("extinguished");
                 }
-            }
+            //}
         }
 
     }

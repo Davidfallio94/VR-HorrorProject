@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl refrigerator
+illum 2
+map_Ka refrigerator.png
+map_Kd refrigerator.png

@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl babu
+illum 2
+map_Ka babu.png
+map_Kd babu.png

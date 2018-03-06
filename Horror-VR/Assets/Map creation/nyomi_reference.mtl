@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl nyomi
+illum 2
+map_Ka nyomi.png
+map_Kd nyomi.png

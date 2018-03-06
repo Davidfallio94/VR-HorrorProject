@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl scarer
+illum 2
+map_Ka scarer.png
+map_Kd scarer.png
