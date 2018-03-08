@@ -9,7 +9,9 @@ namespace control
         private SteamVR_TrackedObject trackedObj;
 
         private GameObject collidingObject;
-        private GameObject objectInHand;
+        private GameObject objectInRightHand;
+        private GameObject objectInLeftHand;
+
         private SteamVR_Controller.Device Controller
         {
             get { return SteamVR_Controller.Input((int)trackedObj.index); }
@@ -62,8 +64,11 @@ namespace control
                 Skinburncontrol.grabbed = true;
                 if (collidingObject)
                 {
-                    GrabObject();
-                    StartCoroutine(LongVibrationR(0.5f, 10000));
+                    if (objectInLeftHand == null)
+                    {
+                        GrabObjectRight();
+                        StartCoroutine(LongVibrationR(0.5f, 10000));
+                    }
                     
                 }
             }
@@ -75,9 +80,11 @@ namespace control
                 Skinburncontrol.grabbed = true;
                 if (collidingObject)
                 {
-                    GrabObject();
-                    StartCoroutine(LongVibrationL(0.5f, 10000));
-                    
+                    if (objectInRightHand == null)
+                    {
+                        GrabObjectLeft();
+                        StartCoroutine(LongVibrationL(0.5f, 10000));
+                    }   
                 }
             }
 
@@ -86,9 +93,9 @@ namespace control
             {
                 Keypress.keypress = false;
 
-                if (objectInHand)
+                if (objectInRightHand)
                 {
-                    ReleaseObject();
+                    ReleaseObjectRight();
                    
                 }
             }
@@ -97,9 +104,9 @@ namespace control
             {
                 Keypress.keypressL = false;
 
-                if (objectInHand)
+                if (objectInLeftHand)
                 {
-                    ReleaseObject();
+                    ReleaseObjectLeft();
                     
                 }
             }
@@ -125,15 +132,25 @@ namespace control
             }
         }
 
-        private void GrabObject()
+        private void GrabObjectRight()
         {
-            objectInHand = collidingObject;
+            objectInRightHand = collidingObject;
             collidingObject = null;
             var joint = AddFixedJoint();
-            joint.connectedBody = objectInHand.GetComponent<Rigidbody>();
-            
+            joint.connectedBody = objectInRightHand.GetComponent<Rigidbody>();
 
         }
+
+        private void GrabObjectLeft()
+        {
+            objectInLeftHand = collidingObject;
+            collidingObject = null;
+            var joint = AddFixedJoint();
+            joint.connectedBody = objectInLeftHand.GetComponent<Rigidbody>();
+
+        }
+
+
 
         private FixedJoint AddFixedJoint()
         {
@@ -143,19 +160,34 @@ namespace control
             return fx;
         }
 
-        private void ReleaseObject()
+        private void ReleaseObjectRight()
         {
             if (GetComponent<FixedJoint>())
             {
                 GetComponent<FixedJoint>().connectedBody = null;
                 Destroy(GetComponent<FixedJoint>());
-                objectInHand.GetComponent<Rigidbody>().velocity = Controller.velocity;
-                objectInHand.GetComponent<Rigidbody>().angularVelocity = Controller.angularVelocity;
+                objectInRightHand.GetComponent<Rigidbody>().velocity = Controller.velocity;
+                objectInRightHand.GetComponent<Rigidbody>().angularVelocity = Controller.angularVelocity;
 
             }
             
 
-            objectInHand = null;
+            objectInRightHand = null;
+        }
+
+        private void ReleaseObjectLeft()
+        {
+            if (GetComponent<FixedJoint>())
+            {
+                GetComponent<FixedJoint>().connectedBody = null;
+                Destroy(GetComponent<FixedJoint>());
+                objectInLeftHand.GetComponent<Rigidbody>().velocity = Controller.velocity;
+                objectInLeftHand.GetComponent<Rigidbody>().angularVelocity = Controller.angularVelocity;
+
+            }
+
+
+            objectInLeftHand = null;
         }
     }
 }
