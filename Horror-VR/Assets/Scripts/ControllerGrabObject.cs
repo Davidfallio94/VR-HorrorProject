@@ -93,22 +93,27 @@ namespace control
             {
                 Keypress.keypress = false;
 
-                if (objectInRightHand)
-                {
-                    ReleaseObjectRight();
-                   
-                }
+                ReleaseObjectRight();
+
+                //if (objectInRightHand)
+                //{
+                //    ReleaseObjectRight();
+
+                //}
             }
 
             if (SteamVR_Controller.Input(SteamVR_Controller.GetDeviceIndex(SteamVR_Controller.DeviceRelation.Leftmost)).GetHairTriggerUp())
             {
                 Keypress.keypressL = false;
 
-                if (objectInLeftHand)
-                {
-                    ReleaseObjectLeft();
+
+                ReleaseObjectLeft();
+
+                //if (objectInLeftHand)
+                //{
+                //    ReleaseObjectLeft();
                     
-                }
+                //}
             }
 
         }

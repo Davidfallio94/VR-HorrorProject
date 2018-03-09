@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - burn
+  - leg
+  - torso
+  - arm
+  - forearm
+  - hand
   layers:
   - Default
   - TransparentFX
