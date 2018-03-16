@@ -9,17 +9,23 @@ namespace Games
     {
         public static bool Manne;
         public AudioSource ringing;
+        public bool test;
 
         void Start()
         {
             Manne = false;
+            test = false;
         }
 
         private void Update()
         {
-            if (Manne == true)
+
+            if (test == true)
             {
-                ringing.Play();
+                //if (Manne == true)
+                //{
+                    ringing.Play();
+                //}
             }
         }
     }
