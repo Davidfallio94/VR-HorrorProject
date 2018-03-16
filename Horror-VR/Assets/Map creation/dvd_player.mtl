@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl dvd_player
+illum 2
+map_Ka dvd_player.png
+map_Kd dvd_player.png

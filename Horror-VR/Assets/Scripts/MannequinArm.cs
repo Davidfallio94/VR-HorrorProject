@@ -2,19 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MannequinArm : MonoBehaviour {
+namespace Games
 
-    public GameObject collidedGameLeg;
-    public MeshRenderer MeshMannequin;
-
-
-    private void OnTriggerEnter(Collider other)
+{
+    public class MannequinArm : MonoBehaviour
     {
-        if (other.tag == "arm")
-        {
 
-            DestroyObject(collidedGameLeg);
-            MeshMannequin.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+        public GameObject collidedGameLeg;
+        public MeshRenderer MeshMannequin;
+
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "arm")
+            {
+                if (MannequinTorso.ManLeg == true)
+                {
+                    DestroyObject(collidedGameLeg);
+                    MeshMannequin.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+                    MannequinTorso.ManLeftArm = true;
+                }
+            }
         }
     }
 }

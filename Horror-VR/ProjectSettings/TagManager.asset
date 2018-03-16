@@ -10,6 +10,7 @@ TagManager:
   - arm
   - forearm
   - hand
+  - AcHands
   layers:
   - Default
   - TransparentFX

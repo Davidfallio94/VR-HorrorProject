@@ -1,0 +1,9 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl bibel0
+illum 2
+map_Ka bibel0.png
+map_Kd bibel0.png
+newmtl bibel1
+illum 2
+map_Ka bibel1.png
+map_Kd bibel1.png

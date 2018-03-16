@@ -2,19 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MannequinForearm : MonoBehaviour {
+namespace Games
 
-    public GameObject collidedGameLeg;
-    public MeshRenderer MeshMannequin;
+{
 
 
-    private void OnTriggerEnter(Collider other)
+    public class MannequinForearm : MonoBehaviour
     {
-        if (other.tag == "forearm")
-        {
 
-            DestroyObject(collidedGameLeg);
-            MeshMannequin.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+        public GameObject collidedGameLeg;
+        public MeshRenderer MeshMannequin;
+
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "forearm")
+            {
+                if (MannequinTorso.ManLeftArm == true)
+                {
+                    DestroyObject(collidedGameLeg);
+                    MeshMannequin.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+                    MannequinTorso.ManRightArm = true;
+                }
+            }
         }
     }
 }
+

@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl caseofbeer
+illum 2
+map_Ka caseofbeer.png
+map_Kd caseofbeer.png

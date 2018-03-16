@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl piano_a
+illum 2
+map_Ka piano_a.png
+map_Kd piano_a.png

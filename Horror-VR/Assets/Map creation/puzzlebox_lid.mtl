@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl puzzlebox_lid
+illum 2
+map_Ka puzzlebox_lid.png
+map_Kd puzzlebox_lid.png

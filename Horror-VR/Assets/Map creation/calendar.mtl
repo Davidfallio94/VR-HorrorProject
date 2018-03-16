@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl clutter_desk
+illum 2
+map_Ka clutter_desk.png
+map_Kd clutter_desk.png

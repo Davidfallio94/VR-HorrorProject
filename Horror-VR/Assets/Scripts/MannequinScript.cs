@@ -2,20 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MannequinScript : MonoBehaviour {
 
+namespace Games
 
-   public GameObject collidedGameLeg;
-   public MeshRenderer MeshMannequin;
-
-
-    private void OnTriggerEnter(Collider other)
+{
+    public class MannequinScript : MonoBehaviour
     {
-        if (other.tag == "leg")
+
+
+        public GameObject collidedGameLeg;
+        public MeshRenderer MeshMannequin;
+
+
+        private void OnTriggerEnter(Collider other)
         {
-           
-            DestroyObject(collidedGameLeg);
-            MeshMannequin.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            if (other.tag == "leg")
+            {
+                if (MannequinTorso.ManTorso == true)
+                {
+                    DestroyObject(collidedGameLeg);
+                    MeshMannequin.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+                    MannequinTorso.ManLeg = true;
+                }
+            }
         }
     }
 }

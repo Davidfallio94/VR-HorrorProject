@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl phone_p2
+illum 2
+map_Ka phone_p2.png
+map_Kd phone_p2.png

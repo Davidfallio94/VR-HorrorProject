@@ -1,0 +1,9 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl teddy_hint_safe
+illum 2
+map_Ka teddy_hint_safe.png
+map_Kd teddy_hint_safe.png
+newmtl teddy_hint
+illum 2
+map_Ka teddy_hint.png
+map_Kd teddy_hint.png

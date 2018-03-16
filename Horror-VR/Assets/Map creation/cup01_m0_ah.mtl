@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl cup01_m0_ah
+illum 2
+map_Ka cup01_m0_ah.png
+map_Kd cup01_m0_ah.png

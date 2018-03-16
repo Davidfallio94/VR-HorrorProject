@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl am_safe
+illum 2
+map_Ka am_safe.png
+map_Kd am_safe.png

@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl cutting_board
+illum 2
+map_Ka cutting_board.png
+map_Kd cutting_board.png

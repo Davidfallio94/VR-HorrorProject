@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl bag001a
+illum 2
+map_Ka bag001a.png
+map_Kd bag001a.png

@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl picture_frame_alt
+illum 2
+map_Ka picture_frame_alt.png
+map_Kd picture_frame_alt.png

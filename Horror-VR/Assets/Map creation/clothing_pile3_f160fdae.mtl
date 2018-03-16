@@ -1,0 +1,5 @@
+# Written by VRF - https://opensource.steamdb.info/ValveResourceFormat/
+newmtl clothing_pile3_alt
+illum 2
+map_Ka clothing_pile3_alt.png
+map_Kd clothing_pile3_alt.png
