@@ -9,6 +9,7 @@ public class MannequinHand : MonoBehaviour {
     public GameObject collidedGameLeg;
     public MeshRenderer MeshMannequin;
     public GameObject theKey;
+    public AudioSource ringing;
 
 
         private void OnTriggerEnter(Collider other)
@@ -22,10 +23,11 @@ public class MannequinHand : MonoBehaviour {
                     MeshMannequin.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
                     MannequinTorso.ManLeg = true;
                     theKey.SetActive(true);
-                    Games.PuzzleManager.Manne = true;
+                    PuzzleManager.Manne = true;
+                    ringing.Play();
+                    ringing.loop = true;
+                    Debug.Log("arm");
                 }
-
-
             }
         }
     }
