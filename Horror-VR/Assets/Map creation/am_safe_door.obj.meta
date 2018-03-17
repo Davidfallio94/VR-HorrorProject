@@ -16,6 +16,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: am_safe_door
+    second: {fileID: 2100000, guid: 3ee5ade4af429ff459fcbe9d86e1c28c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: am_safe_doorMat
     second: {fileID: 2100000, guid: 8d1aed7feb662af41b4f6b07aa6e9e29, type: 2}
   materials:
@@ -47,7 +52,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.02
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
