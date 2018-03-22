@@ -5,10 +5,13 @@ using UnityEngine;
 public class LockScript : MonoBehaviour {
 
     private bool Locked;
+    public GameObject self;
     public AudioSource Lock;
     public AudioClip Unlocked;
     public GameObject _Lock;
     public Animation open;
+    public Animator Her;
+    public GameObject Writing;
 
     void Start()
     {
@@ -31,8 +34,11 @@ public class LockScript : MonoBehaviour {
             Lock.clip = Unlocked;
             Lock.Play();
             _Lock.SetActive(true);
-            Destroy(this, 5);
             open.Play();
+            Her.SetBool("Point" , true);
+            Writing.SetActive(true);
+            Destroy(self);
+            
 
         }
     }
