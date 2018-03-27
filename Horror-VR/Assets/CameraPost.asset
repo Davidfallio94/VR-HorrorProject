@@ -43,7 +43,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       intensity: 0.5
-      radius: 0.25
+      radius: 0.15
       sampleCount: 10
       downsampling: 1
       forceForwardCompatibility: 0
@@ -113,12 +113,12 @@ MonoBehaviour:
     m_Settings:
       tonemapping:
         tonemapper: 2
-        neutralBlackIn: 0.056
-        neutralWhiteIn: 11.5
-        neutralBlackOut: 0.012
-        neutralWhiteOut: 11.8
-        neutralWhiteLevel: 10.2
-        neutralWhiteClip: 7.4
+        neutralBlackIn: 0.032
+        neutralWhiteIn: 5.1
+        neutralBlackOut: 0.025
+        neutralWhiteOut: 14.8
+        neutralWhiteLevel: 20
+        neutralWhiteClip: 9.6
       basic:
         postExposure: 0
         temperature: -10

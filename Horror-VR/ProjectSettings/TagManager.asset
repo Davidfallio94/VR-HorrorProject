@@ -12,6 +12,7 @@ TagManager:
   - hand
   - AcHands
   - Key
+  - finger
   layers:
   - Default
   - TransparentFX
