@@ -19,10 +19,12 @@ namespace Safe
 
         public static int inputs;
         public Animator OpenSafe;
+        public Animator alma;
 
         public AudioClip doorOpen;
         public AudioClip denied;
         public AudioSource SafeDoor;
+        public GameObject almarig;
 
         // Use this for initialization
         void Start()
@@ -49,6 +51,8 @@ namespace Safe
                 {
                     SafeDoor.clip = doorOpen;
                     OpenSafe.SetBool("open",true);
+                    alma.SetBool("idle", true);
+                    almarig.transform.localPosition = new Vector3(-8.257f, 0.006f, 2.819f);
                     SafeDoor.Play();
                     num1 = true;
                     num2 = true;
