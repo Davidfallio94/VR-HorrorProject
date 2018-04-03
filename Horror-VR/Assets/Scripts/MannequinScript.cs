@@ -18,12 +18,10 @@ namespace Games
         {
             if (other.tag == "leg")
             {
-                if (MannequinTorso.ManTorso == true)
-                {
                     DestroyObject(collidedGameLeg);
                     MeshMannequin.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
                     MannequinTorso.ManLeg = true;
-                }
+              
             }
         }
     }
