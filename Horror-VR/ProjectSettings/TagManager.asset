@@ -13,6 +13,7 @@ TagManager:
   - AcHands
   - Key
   - finger
+  - Dvd
   layers:
   - Default
   - TransparentFX

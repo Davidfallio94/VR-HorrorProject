@@ -25,6 +25,10 @@ namespace Safe
         public AudioClip denied;
         public AudioSource SafeDoor;
         public GameObject almarig;
+        public AudioSource almasound;
+        public AudioClip creak;
+
+      
 
         // Use this for initialization
         void Start()
@@ -52,8 +56,12 @@ namespace Safe
                     SafeDoor.clip = doorOpen;
                     OpenSafe.SetBool("open",true);
                     alma.SetBool("idle", true);
-                    almarig.transform.localPosition = new Vector3(-8.257f, 0.006f, 2.819f);
                     SafeDoor.Play();
+                    almarig.transform.localPosition = new Vector3(0.87f, 0.006f, 14.0f);
+                    almarig.transform.localRotation = new Quaternion(0f, 0f, 0f, 0f);
+                    almasound.clip = creak;
+                    almasound.Play();
+                    
                     num1 = true;
                     num2 = true;
                     num3 = true;
