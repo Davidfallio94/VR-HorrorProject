@@ -16,7 +16,7 @@ namespace Games
         {
             if (other.tag == "arm")
             {
-                if (MannequinTorso.ManLeg == true)
+                if (MannequinTorso.ManTorso== true )
                 {
                     DestroyObject(collidedGameLeg);
                     MeshMannequin.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
