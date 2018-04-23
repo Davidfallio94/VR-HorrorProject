@@ -42,32 +42,32 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mesh_0028Mat
-    second: {fileID: 2100000, guid: 3dece42ce25efde4db48da26f4e98453, type: 2}
+    second: {fileID: 2100000, guid: b41f4c3232486b4419219b7889c676d0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mesh_0029Mat
-    second: {fileID: 2100000, guid: 6327615e012cacf4187dd2e427da9bad, type: 2}
+    second: {fileID: 2100000, guid: 939c1731940d9f74882646b8f5bc437e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mesh_0030Mat
-    second: {fileID: 2100000, guid: f8bf5f7cd478b4a46b20b4df087a4d92, type: 2}
+    second: {fileID: 2100000, guid: 682ad97c9cf02ea42a878f2a3de98a71, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mesh_0032Mat
-    second: {fileID: 2100000, guid: 33f285abaee099d4aba5fb3363fd226a, type: 2}
+    second: {fileID: 2100000, guid: 075ee3b8ea51ab646b41bb75f1dec3d5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mesh_0033Mat
-    second: {fileID: 2100000, guid: 7479ef274925d694aa35dce42255c666, type: 2}
+    second: {fileID: 2100000, guid: 091477addd322704a8ec0e2602e90da1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mesh_0034Mat
-    second: {fileID: 2100000, guid: 72f4b2b34344e2a44a1e754dc4cc7897, type: 2}
+    second: {fileID: 2100000, guid: 295ecfe17a44c9b4b912ef1376506c37, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -97,13 +97,13 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.02
     meshCompression: 0
     addColliders: 0
-    importVisibility: 1
+    importVisibility: 0
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -117,7 +117,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
