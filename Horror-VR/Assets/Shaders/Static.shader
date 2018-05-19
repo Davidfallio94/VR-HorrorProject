@@ -1,6 +1,11 @@
 ﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 // Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Shaders/TVStatic"
 {
 
@@ -75,7 +80,7 @@ Shader "Shaders/TVStatic"
 
 	}
 
-
+	
 	fixed4 frag(float4 screenPos : SV_POSITION, fragmentInput i) : SV_Target
 	{
 

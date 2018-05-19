@@ -12,6 +12,7 @@ public class LockScript : MonoBehaviour {
     public Animation open;
     public Animator Her;
     public GameObject Writing;
+    public GameObject Bible;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class LockScript : MonoBehaviour {
 
         if (other.tag == "Key")
         {
+            Bible.SetActive(true);
             Locked = false;
             Lock.clip = Unlocked;
             Lock.Play();
@@ -38,8 +40,6 @@ public class LockScript : MonoBehaviour {
             Her.SetBool("Point" , true);
             Writing.SetActive(true);
             Destroy(self);
-            
-
         }
     }
 

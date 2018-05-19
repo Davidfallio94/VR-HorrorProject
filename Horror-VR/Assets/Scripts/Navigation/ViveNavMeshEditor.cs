@@ -40,7 +40,7 @@ public class ViveNavMeshEditor : Editor {
         GUIStyle bold_wrap = EditorStyles.boldLabel;
         bold_wrap.wordWrap = true;
         GUILayout.Label("Navmesh Preprocessor for HTC Vive Locomotion", bold_wrap);
-        GUILayout.Label("Adrian Biagioli 2017", EditorStyles.miniLabel);
+        GUILayout.Label("David Fall", EditorStyles.miniLabel);
 
         GUILayout.Label("Before Using", bold_wrap);
         GUIStyle wrap = EditorStyles.label;

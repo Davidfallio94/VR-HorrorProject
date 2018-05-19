@@ -52,7 +52,7 @@ namespace Exiting
                 {
                     door.clip = open;
                     door.Play();
-                    SceneManager.LoadScene("MainMenu");
+                    SceneManager.LoadScene("EndScene");
                 }
 
                 Debug.Log("nail"+nail1 + nail2 +nail3+nail4+nail5);

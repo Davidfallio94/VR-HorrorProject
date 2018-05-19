@@ -174,7 +174,7 @@ public class ViveNavMesh : MonoBehaviour
             return;
         }
 
-        // If _SelectableMesh == null there is a crash in Unity 5.4 beta (apparently you can't pass null to CommandBuffer::DrawMesh now).
+       
         if (!_SelectableMesh || !GroundMaterial)
             return;
 

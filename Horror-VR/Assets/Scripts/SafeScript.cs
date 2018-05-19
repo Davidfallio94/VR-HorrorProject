@@ -27,6 +27,7 @@ namespace Safe
         public GameObject almarig;
         public AudioSource almasound;
         public AudioClip creak;
+        public GameObject DVD;
 
       
 
@@ -53,6 +54,7 @@ namespace Safe
             {
                 if (num1 == true && num2 ==true && num3 == true && num9 == true)
                 {
+                    DVD.SetActive(true);
                     SafeDoor.clip = doorOpen;
                     OpenSafe.SetBool("open",true);
                     alma.SetBool("idle", true);

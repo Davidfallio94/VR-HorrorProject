@@ -13,6 +13,7 @@ public class DvdScripts : MonoBehaviour
 
     public Animator box;
     public GameObject screen;
+    public GameObject particles;
 
 
     void Start()
@@ -35,6 +36,7 @@ public class DvdScripts : MonoBehaviour
 
             box.SetBool("open",true);
             Crowbar.SetActive(true);
+            particles.SetActive(true);
 
         }
     }

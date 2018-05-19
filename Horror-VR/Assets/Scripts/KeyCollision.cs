@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class KeyCollision : MonoBehaviour {
 
-    
-
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "AcHands")

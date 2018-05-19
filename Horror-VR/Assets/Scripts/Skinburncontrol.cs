@@ -53,29 +53,25 @@ namespace control
 
         private void OnTriggerEnter(Collider other)
         {
-            if (grabbed == true)
-            {
+           
                 if (other.tag == "burn")
                 {
                     burn = true;
                     Debug.Log("burn baby burn");
                 }
-
-            }
             
         }
 
         private void OnTriggerExit(Collider other)
         {
-            //if (grabbed == true)
-            //{
+           
                 if (other.tag == "burn")
                 {
                     grabbed = false;
                     burn = false;
                     Debug.Log("extinguished");
                 }
-            //}
+            
         }
 
     }
